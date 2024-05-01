@@ -22,8 +22,6 @@ still in development will be udpated after adding models and database configurat
 
 ### Docker Configuratoin(dockerfile)
 
-Certainly! Let's break down each line of your Dockerfile and explain its purpose:
-
 ```Dockerfile
 FROM python:3.9-alpine3.13
 ```
@@ -89,8 +87,6 @@ USER django-user
 ```
 - This line sets the default user to `django-user`. Any subsequent commands in the Dockerfile will be executed as this user, providing an additional layer of security by running the container with reduced privileges.
 
-I hope this breakdown helps you understand each line of your Dockerfile. Let me know if you have any further questions or need additional clarification!
-
 ### Docker-compose file
 This Docker Compose configuration defines a service named `app` for running your Django application. Let's break down each part:
 
@@ -128,8 +124,6 @@ services:
 
 
 ### Git hub actions configruations
-
-Certainly! Setting up GitHub Actions to automate Docker builds and deployments is a great way to streamline your development workflow. Here's an explanation of how you can use GitHub Actions to log in to Docker Hub securely:
 
 1. **Create a Docker Hub Access Token**:
    - Go to the Docker Hub website and sign in to your account.
@@ -175,8 +169,6 @@ Certainly! Setting up GitHub Actions to automate Docker builds and deployments i
    - You should see a step for logging in to Docker Hub, using the access token from the GitHub secret.
 
 By following these steps, your GitHub Actions workflow will be able to securely log in to Docker Hub using the access token stored as a GitHub secret. This allows you to automate Docker builds and deployments as part of your CI/CD pipeline. You can then update your README.md to include instructions for setting up the Docker Hub access token as a secret and using it in your GitHub Actions workflow.
-
-Here's a breakdown of the GitHub Actions workflow you provided:
 
 ```yaml
 name: Checks
@@ -366,8 +358,6 @@ We welcome contributions from the community to improve the Recipe App API. If yo
 
 Thank you for contributing to the Recipe App API! Your contributions help make the project better for everyone.
 
-
-## License
 
 ## License
 

@@ -18,8 +18,25 @@ This project's purpose is to learn advanced concepts of Django, with a main focu
 
 ## Features
 
-still in development will be udpated after adding models and database configuration
+### Prerequisites
 
+- Docker
+- Docker Compose
+- Python 3.x
+
+### Build Image
+
+### Building Docker Image
+
+1. Build the Docker image:
+
+```cmd
+docker-compose build
+```
+2. run-project:
+```cmd
+dcoker-compose up
+```
 ### Docker Configuratoin(dockerfile)
 
 ```Dockerfile
@@ -93,7 +110,7 @@ This Docker Compose configuration defines a service named `app` for running your
 ```yaml
 services:
   app:
-    build: 
+    build:
       context: .
       args:
         - DEV=true
@@ -101,7 +118,7 @@ services:
       - "8000:8000"
     volumes:
       - ./app:/app
-    command: 
+    command:
       sh -c "python manage.py runserver 0.0.0.0:8000"
 ```
 
@@ -161,7 +178,7 @@ services:
    - Replace `DOCKERHUB_USERNAME` with your Docker Hub username.
    - Ensure that the secret name (`DOCKERHUB_TOKEN`) matches the name you used when creating the secret in GitHub.
 
-   
+
 
 4. **Push Your Changes and Observe GitHub Actions**:
    - Commit and push your changes to trigger the GitHub Actions workflow.
